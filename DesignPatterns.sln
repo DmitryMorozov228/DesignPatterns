@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Builder", "Builder\Builder.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentBuilder", "FluentBuilder\FluentBuilder.csproj", "{63060831-52DF-4C5C-A689-53373ABF11E9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adapter", "Adapter\Adapter.csproj", "{F8173F14-7CC3-4AAC-87D7-7A04E6B99F1C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{63060831-52DF-4C5C-A689-53373ABF11E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{63060831-52DF-4C5C-A689-53373ABF11E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{63060831-52DF-4C5C-A689-53373ABF11E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8173F14-7CC3-4AAC-87D7-7A04E6B99F1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8173F14-7CC3-4AAC-87D7-7A04E6B99F1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8173F14-7CC3-4AAC-87D7-7A04E6B99F1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8173F14-7CC3-4AAC-87D7-7A04E6B99F1C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
