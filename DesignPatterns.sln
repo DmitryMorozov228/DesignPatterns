@@ -17,27 +17,29 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentBuilder", "FluentBuil
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Adapter", "Adapter\Adapter.csproj", "{F8173F14-7CC3-4AAC-87D7-7A04E6B99F1C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bridge", "Bridge\Bridge.csproj", "{FA70B5E0-D5F9-4DC9-B652-8BE0F72A172A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bridge", "Bridge\Bridge.csproj", "{FA70B5E0-D5F9-4DC9-B652-8BE0F72A172A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Composite", "Composite\Composite.csproj", "{C8458D3F-FA7F-41F0-9032-C1AD59E79D3A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Composite", "Composite\Composite.csproj", "{C8458D3F-FA7F-41F0-9032-C1AD59E79D3A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decorator", "Decorator\Decorator.csproj", "{237EB619-F01C-4EB3-A91E-CBF96328B532}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Decorator", "Decorator\Decorator.csproj", "{237EB619-F01C-4EB3-A91E-CBF96328B532}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facade", "Facade\Facade.csproj", "{496E089F-531E-43A9-B345-979E116F088A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Facade", "Facade\Facade.csproj", "{496E089F-531E-43A9-B345-979E116F088A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flyweight", "Flyweight\Flyweight.csproj", "{B3A75B26-1099-447A-8761-F4E8E8086B4F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Flyweight", "Flyweight\Flyweight.csproj", "{B3A75B26-1099-447A-8761-F4E8E8086B4F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proxy", "Proxy\Proxy.csproj", "{18E69702-5D7B-4055-93FD-AA28CC602551}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Proxy", "Proxy\Proxy.csproj", "{18E69702-5D7B-4055-93FD-AA28CC602551}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChainOfResponsibility", "ChainOfResponsibility\ChainOfResponsibility.csproj", "{7497DE16-5097-402A-BF11-FC96E3BA9C16}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChainOfResponsibility", "ChainOfResponsibility\ChainOfResponsibility.csproj", "{7497DE16-5097-402A-BF11-FC96E3BA9C16}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Command", "Command\Command.csproj", "{4102C154-0F33-474E-B6BF-D6CD81068986}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Command", "Command\Command.csproj", "{4102C154-0F33-474E-B6BF-D6CD81068986}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interpreter", "Interpreter\Interpreter.csproj", "{C177FE67-97B2-42F8-9FC2-32562BE9F694}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interpreter", "Interpreter\Interpreter.csproj", "{C177FE67-97B2-42F8-9FC2-32562BE9F694}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Iterator", "Iterator\Iterator.csproj", "{BA8D8473-795F-4894-A53C-EC870F2853D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Iterator", "Iterator\Iterator.csproj", "{BA8D8473-795F-4894-A53C-EC870F2853D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mediator", "Mediator\Mediator.csproj", "{9F6502FD-ED48-40C1-81E0-B814BF828B18}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mediator", "Mediator\Mediator.csproj", "{9F6502FD-ED48-40C1-81E0-B814BF828B18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Memento", "Memento\Memento.csproj", "{6347CEDE-704C-4F6F-8397-2E47312503DD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -117,6 +119,10 @@ Global
 		{9F6502FD-ED48-40C1-81E0-B814BF828B18}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F6502FD-ED48-40C1-81E0-B814BF828B18}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F6502FD-ED48-40C1-81E0-B814BF828B18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6347CEDE-704C-4F6F-8397-2E47312503DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6347CEDE-704C-4F6F-8397-2E47312503DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6347CEDE-704C-4F6F-8397-2E47312503DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6347CEDE-704C-4F6F-8397-2E47312503DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
