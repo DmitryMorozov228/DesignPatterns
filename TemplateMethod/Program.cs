@@ -1,4 +1,7 @@
-﻿using System;
+﻿// Developed by Softeq Development Corporation
+// http://www.softeq.com
+
+using System;
 
 namespace TemplateMethod
 {
@@ -6,7 +9,12 @@ namespace TemplateMethod
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var dotNetInterview = new DotNetInterview();
+            var javaInterview = new JavaInterview();
+            dotNetInterview.Initiate();
+            Console.WriteLine();
+            javaInterview.Initiate();
+            Console.ReadKey();
         }
     }
 }
