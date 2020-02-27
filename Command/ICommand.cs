@@ -5,7 +5,7 @@
 namespace Command
 {
     /// <summary>
-    /// The Command abstract class
+    /// The Command interface declares a methods for executing a command.
     /// </summary>
     public interface ICommand
     {

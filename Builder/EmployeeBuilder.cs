@@ -4,6 +4,10 @@
 
 namespace Builder
 {
+    /// <summary>
+    /// The Builder abstract class specifies methods for creating the different parts
+    /// of the Employee objects.
+    /// </summary>
     internal abstract class EmployeeBuilder 
     {
         protected Employee Employee { get; }
@@ -13,9 +17,9 @@ namespace Builder
             Employee = new Employee();
         }
 
-        internal abstract void SetName();
-        internal abstract void SetPosition();
-        internal abstract void SetSalary();
+        internal abstract EmployeeBuilder SetName();
+        internal abstract EmployeeBuilder SetPosition();
+        internal abstract EmployeeBuilder SetSalary();
         internal abstract Employee Build();
     }
 }

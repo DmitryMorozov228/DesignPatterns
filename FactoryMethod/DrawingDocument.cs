@@ -7,6 +7,10 @@ using FactoryMethod.Interfaces;
 
 namespace FactoryMethod
 {
+    /// <summary>
+    /// Concrete Products provide various implementations of the Product
+    /// interface.
+    /// </summary>
     internal class DrawingDocument : Document
     {
         public DrawingDocument()

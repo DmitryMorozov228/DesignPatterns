@@ -13,9 +13,9 @@ namespace Interpreter
         {
             Console.WriteLine("Input your roman number:");
             var romanNumber = Console.ReadLine();
-            Context context = new Context(romanNumber);
+            var context = new Context(romanNumber);
 
-            List<Expression> tree = new List<Expression>
+            var tree = new List<Expression>
             {
                 new ThousandExpression(),
                 new HundredExpression(),
@@ -23,7 +23,7 @@ namespace Interpreter
                 new OneExpression()
             };
 
-            foreach (Expression exp in tree)
+            foreach (var exp in tree)
             {
                 exp.Interpret(context);
             }

@@ -4,7 +4,9 @@
 
 namespace Command
 {
-    // Concrete command
+    /// <summary>
+    /// Concrete command
+    /// </summary>
     internal class TestCommand : ICommand
     {
         private readonly Tester _tester;

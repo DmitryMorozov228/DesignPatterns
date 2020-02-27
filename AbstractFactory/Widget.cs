@@ -6,6 +6,11 @@ using AbstractFactory.Widgets.Interfaces;
 
 namespace AbstractFactory
 {
+    /// <summary>
+    /// The client class works with factories and products only through abstract
+    /// types: AbstractFactory and AbstractProduct. This lets you pass any
+    /// factory or product subclass to the client code without breaking it.
+    /// </summary>
     internal class Widget
     {
         private readonly IButton _button;

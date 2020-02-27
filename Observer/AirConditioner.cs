@@ -9,7 +9,7 @@ namespace Observer
     /// Stores state that should stay consistent with the Subject's.
     /// Implements the Observer updating interface to keep its state consistent with the subject's.
     /// </summary>
-    public class AirConditioner : ISensorListener
+    internal class AirConditioner : ISensorListener
     {
         private readonly TemperatureSensor _temperatureSensor;
 
@@ -21,7 +21,7 @@ namespace Observer
         }
 
         private decimal MinCoolingTemperature { get; }
-        public bool IsCooling { get; set; }
+        public bool IsCooling { get; private set; }
 
         public void Update()
         {

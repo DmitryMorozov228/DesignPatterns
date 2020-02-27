@@ -5,9 +5,13 @@ using System;
 
 namespace State
 {
-    public class DeadState : IState
+    /// <summary>
+    /// Concrete State implement various behaviors, associated with a state of
+    /// the Context.
+    /// </summary>
+    internal class DeadState : State
     {
-        public void Execute()
+        internal override void Execute()
         {
             Console.WriteLine("The player is dead. Game Over.");
         }

@@ -13,17 +13,11 @@ namespace Iterator
     /// </summary>
     internal class EmployeeList : StaffCollection
     {
-        private readonly List<Employee> _employees;
+        private readonly IList<Employee> _employees;
 
-        public EmployeeList()
+        public EmployeeList(IList<Employee> employees)
         {
-            _employees = new List<Employee>
-            {
-                new Employee("Ken", "Black", 30, "Manager"),
-                new Employee("Jack", "White", 35, "Officer"),
-                new Employee("Bruno", "Mars", 37, "Developer"),
-                new Employee("Abraham", "Blood", 23, "Developer")
-            };
+            _employees = employees;
         }
 
 

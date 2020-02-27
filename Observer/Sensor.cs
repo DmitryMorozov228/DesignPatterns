@@ -10,31 +10,17 @@ namespace Observer
     /// Knows its observers. Any number of Observer objects may observe a subject.
     /// Provides a way of attaching and detaching Observer objects.
     /// </summary>
-    public abstract class Sensor
+    internal abstract class Sensor
     {
-        private readonly IList<ISensorListener> _listeners;
+        protected readonly IList<ISensorListener> Listeners;
 
         protected Sensor()
         {
-            _listeners = new List<ISensorListener>();
+            Listeners = new List<ISensorListener>();
         }
 
-        public void AddListener(ISensorListener listener)
-        {
-            _listeners.Add(listener);
-        }
-
-        public void RemoveListener(ISensorListener listener)
-        {
-            _listeners.Remove(listener);
-        }
-
-        public void NotifyListeners()
-        {
-            foreach (var listener in _listeners)
-            {
-                listener.Update();
-            }
-        }
+        internal abstract void AddListener(ISensorListener listener);
+        internal abstract void RemoveListener(ISensorListener listener);
+        internal abstract void NotifyListeners();
     }
 }

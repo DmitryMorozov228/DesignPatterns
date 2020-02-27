@@ -14,7 +14,7 @@ namespace Mediator
     {
         private readonly Mediator _mediator;
 
-        public Taxi(Mediator mediator)
+        internal Taxi(Mediator mediator)
         {
             _mediator = mediator;
         }

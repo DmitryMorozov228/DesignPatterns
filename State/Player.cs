@@ -5,9 +5,14 @@ using System;
 
 namespace State
 {
+    /// <summary>
+    /// The Context defines the interface of interest to clients. It also
+    /// maintains a reference to an instance of a State subclass, which
+    /// represents the current state of the Context.
+    /// </summary>
     internal class Player
     {
-        private IState _state;
+        private State _state;
 
         internal Player()
         {

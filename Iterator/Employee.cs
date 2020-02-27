@@ -9,10 +9,10 @@ namespace Iterator
     /// </summary>
     internal class Employee
     {
-        internal string FirstName { get; set; }
-        internal string LastName { get; set; }
-        internal int Age { get; set; }
-        internal string Position { get; set; }
+        private string FirstName { get; set; }
+        private string LastName { get; set; }
+        private int Age { get; set; }
+        private string Position { get; set; }
 
         public Employee(string firstName, string lastName, int age, string position)
         {
@@ -24,7 +24,7 @@ namespace Iterator
 
         public override string ToString()
         {
-            return $"FirstName: {FirstName}, LastName: {LastName}, Age: {Age}, Position: {Position}";
+            return $"FirstName: {FirstName}\nLastName: {LastName}\nAge: {Age}\nPosition: {Position}\n";
         }
     }
 }

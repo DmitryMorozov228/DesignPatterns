@@ -4,7 +4,9 @@
 
 namespace Command
 {
-    // Concrete command
+    /// <summary>
+    /// Concrete command
+    /// </summary>
     internal class CodeCommand : ICommand
     {
         private readonly Programmer _programmer;

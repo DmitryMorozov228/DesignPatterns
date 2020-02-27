@@ -5,9 +5,13 @@ using System;
 
 namespace State
 {
-    public class HurtState : IState
+    /// <summary>
+    /// Concrete State implement various behaviors, associated with a state of
+    /// the Context.
+    /// </summary>
+    internal class HurtState : State
     {
-        public void Execute()
+        internal override void Execute()
         {
             Console.WriteLine("The player is wounded.");
         }

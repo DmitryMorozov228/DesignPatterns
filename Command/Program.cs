@@ -11,23 +11,23 @@ namespace Command
     {
         static void Main(string[] args)
         {
-            Programmer programmer = new Programmer();
-            Tester tester = new Tester();
-            BusinessAnalyst businessAnalyst = new BusinessAnalyst();
+            var programmer = new Programmer();
+            var tester = new Tester();
+            var businessAnalyst = new BusinessAnalyst();
 
-            List<ICommand> _commands = new List<ICommand>
+            var commands = new List<ICommand>
             {
                 new AnalyzeCommand(businessAnalyst),
                 new CodeCommand(programmer),
                 new TestCommand(tester),
             };
 
-            Manager manager = new Manager();
-            manager.SetCommand(new MacroCommand(_commands));
+            var manager = new Manager();
+            manager.SetCommand(new MacroCommand(commands));
             manager.StartProject();
             manager.StopProject();
 
-            Console.ReadLine();
+            Console.ReadKey();
         }
     }
 }

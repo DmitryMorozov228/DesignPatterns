@@ -3,7 +3,6 @@
 // 
 
 using System;
-using FactoryMethod.Interfaces;
 
 namespace FactoryMethod
 {
@@ -11,11 +10,11 @@ namespace FactoryMethod
     {
         static void Main(string[] args)
         {
-            var drawingApplication = new Application<DrawingDocument>();
+            var drawingApplication = new DrawingApplication();
             drawingApplication.CreateDocument();
-            var textApplication = new Application<TextDocument>();
+            var textApplication = new TextApplication();
             textApplication.CreateDocument();
-            Console.ReadLine();
+            Console.ReadKey();
         }
     }
 }

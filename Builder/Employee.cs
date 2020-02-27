@@ -4,6 +4,10 @@
 
 namespace Builder
 {
+    /// <summary>
+    /// It makes sense to use the Builder pattern only when your products are
+    /// quite complex and require extensive configuration.
+    /// </summary>
     internal class Employee
     {
         internal string Name { get; set; }
@@ -12,7 +16,7 @@ namespace Builder
 
         public override string ToString()
         {
-            return $"Name: {Name}, Position: {Position}, Salary: {Salary}";
+            return $"Name: {Name ?? "Unknown"}\nPosition: {Position ?? "Unknown"}\nSalary: {Salary}$";
         }
     }
 }

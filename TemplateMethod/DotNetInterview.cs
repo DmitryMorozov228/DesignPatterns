@@ -29,7 +29,7 @@ namespace TemplateMethod
 
         protected override void Discuss()
         {
-            Console.WriteLine("Discussing test with .NET Unit Lead.");
+            Console.WriteLine("Discussing the test with .NET Unit Lead.");
         }
     }
 }

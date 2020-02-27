@@ -5,11 +5,16 @@ using System;
 
 namespace Strategy
 {
+    /// <summary>
+    /// Concrete strategies implement the algorithm while following
+    /// the base strategy interface. The interface makes them
+    /// interchangeable in the context.
+    /// </summary>
     public class RequiredFieldValidator : IValidator
     {
         public void Validate()
         {
-            Console.WriteLine("This validator is used for check required field.");
+            Console.WriteLine("This validator is used to check required field.");
         }
     }
 }

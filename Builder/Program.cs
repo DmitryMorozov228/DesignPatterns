@@ -10,11 +10,12 @@ namespace Builder
     {
         static void Main(string[] args)
         {
-            var developerBuilder = new DeveloperBuilder();
-            var director = new Director(developerBuilder);
-            director.Construct();
-            var employeeInfo = developerBuilder.Build().ToString();
-            Console.WriteLine(employeeInfo);
+            var employee = new DeveloperBuilder()
+                .SetName()
+                .SetPosition()
+                .SetSalary()
+                .Build();
+            Console.WriteLine(employee.ToString());
             Console.ReadKey();
         }
     }

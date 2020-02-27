@@ -8,17 +8,35 @@ namespace Observer
     /// Stores state of interest to Concrete Observer.
     /// Sends a notification to its observers when its state changes.
     /// </summary>
-    public class TemperatureSensor : Sensor
+    internal class TemperatureSensor : Sensor
     {
         private decimal _temperature;
 
-        public decimal Temperature
+        internal decimal Temperature
         {
             get => _temperature;
             set
             {
                 _temperature = value;
                 NotifyListeners();
+            }
+        }
+
+        internal override void AddListener(ISensorListener listener)
+        {
+            Listeners.Add(listener);
+        }
+
+        internal override void RemoveListener(ISensorListener listener)
+        {
+            Listeners.Remove(listener);
+        }
+
+        internal override void NotifyListeners()
+        {
+            foreach (var listener in Listeners)
+            {
+                listener.Update();
             }
         }
     }

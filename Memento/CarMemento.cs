@@ -3,7 +3,11 @@
 
 namespace Memento
 {
-    internal class CarMemento
+    /// <summary>
+    /// The Concrete Memento contains the infrastructure for storing the
+    /// Originator's state.
+    /// </summary>
+    internal class CarMemento : IMemento
     {
         internal CarMemento(int speed, int mileage)
         {
@@ -11,7 +15,7 @@ namespace Memento
             Mileage = mileage;
         }
 
-        internal int Speed { get; set; }
-        internal int Mileage { get; set; }
+        public int Speed { get; set; }
+        public int Mileage { get; set; }
     }
 }

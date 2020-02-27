@@ -3,6 +3,7 @@
 // 
 
 using System;
+using System.Collections.Generic;
 
 namespace Iterator
 {
@@ -15,14 +16,21 @@ namespace Iterator
     {
         static void Main(string[] args)
         {
-            var employeeList = new EmployeeList();
-            var employeeListInterator = employeeList.CreateIterator();
+            var employees = new List<Employee>
+            {
+                new Employee("Ken", "Black", 30, "Manager"),
+                new Employee("Jack", "White", 35, "Officer"),
+                new Employee("Bruno", "Mars", 37, "Developer"),
+                new Employee("Abraham", "Blood", 23, "Developer")
+            };
+            var employeeList = new EmployeeList(employees);
+            var employeeListIterator = employeeList.CreateIterator();
             if (employeeList.Count > 0)
             {
-                Console.WriteLine("Employees:");
-                for (employeeListInterator.First(); employeeListInterator.HasNext(); employeeListInterator.Next())
+                Console.WriteLine("--- Employees ---");
+                for (employeeListIterator.First(); employeeListIterator.HasNext(); employeeListIterator.Next())
                 {
-                    var employee = employeeListInterator.GetCurrentItem() as Employee;
+                    var employee = employeeListIterator.GetCurrentItem() as Employee;
                     Console.WriteLine(employee.ToString());
                 }
             }

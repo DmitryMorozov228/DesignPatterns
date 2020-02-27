@@ -9,8 +9,6 @@ namespace Interpreter
     /// </summary>
     internal class Context
     {
-        private int _output;
-
         public Context(string input)
         {
             Input = input;

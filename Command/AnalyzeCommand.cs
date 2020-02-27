@@ -4,7 +4,9 @@
 
 namespace Command
 {
-    // Concrete command
+    /// <summary>
+    /// Concrete command
+    /// </summary>
     internal class AnalyzeCommand : ICommand
     {
         private readonly BusinessAnalyst _businessAnalyst;

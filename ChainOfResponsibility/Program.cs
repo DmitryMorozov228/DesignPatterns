@@ -10,9 +10,9 @@ namespace ChainOfResponsibility
     {
         static void Main(string[] args)
         {
-            Receiver receiver = new Receiver(false, true);
-            PaymentHandler bankTransferHandler = new BankTransferHandler();
-            PaymentHandler moneyTransferHandler = new MoneyTransferHandler();
+            var receiver = new Receiver(false, true);
+            var bankTransferHandler = new BankTransferHandler();
+            var moneyTransferHandler = new MoneyTransferHandler();
             bankTransferHandler.Successor = moneyTransferHandler;
             bankTransferHandler.Handle(receiver);
             Console.ReadKey();

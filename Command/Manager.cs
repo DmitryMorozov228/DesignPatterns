@@ -4,8 +4,10 @@
 
 namespace Command
 {
-    // The Invoker is associated with one or several commands. It sends a
-    // request to the command.
+    /// <summary>
+    /// The Invoker is associated with one or several commands. It sends a
+    /// request to the command.
+    /// </summary>
     internal class Manager
     {
         private ICommand _command;
