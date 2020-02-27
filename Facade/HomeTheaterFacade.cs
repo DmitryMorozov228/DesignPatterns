@@ -3,14 +3,16 @@
 // 
 
 using System;
+using Facade.Interfaces;
 
 namespace Facade
 {
-    // The Facade class provides a simple interface to the complex logic of one
-    // or several subsystems. The Facade delegates the client requests to the
-    // appropriate objects within the subsystem. The Facade is also responsible
-    // for managing their lifecycle. All of this shields the client from the
-    // undesired complexity of the subsystem.
+    /// <summary>
+    /// The Facade class provides a simple interface to the complex logic of one
+    /// or several subsystems. The Facade delegates the client requests to the
+    /// appropriate objects within the subsystem. The Facade is also responsible
+    /// for managing their lifecycle.
+    /// </summary>
     internal class HomeTheaterFacade : TheaterFacade
     {
         private readonly IAmplifierService _amplifierService;

@@ -2,9 +2,9 @@
 // http://www.softeq.com
 // 
 
-namespace Facade
+namespace Facade.Interfaces
 {
-    public interface IAmplifierService
+    internal interface IAmplifierService
     {
         void On();
         void SetDvd();

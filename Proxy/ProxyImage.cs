@@ -4,11 +4,13 @@
 
 namespace Proxy
 {
-    // The Proxy has an interface identical to the RealSubject.
+    /// <summary>
+    /// The Proxy has an interface identical to the RealSubject. 
+    /// </summary>
     internal class ProxyImage : IImage
     {
-        private RealImage _realImage;
         private readonly string _fileName;
+        private IImage _realImage;
 
         internal ProxyImage(string fileName)
         {

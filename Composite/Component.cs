@@ -6,15 +6,18 @@ using System;
 
 namespace Composite
 {
-    // The base Component class declares common operations for both simple and
-    // complex objects of a composition.
+    /// <summary>
+    /// The base Component class declares common operations for both simple and
+    /// complex objects of a composition.
+    /// </summary>
+
     internal abstract class Component
     {
-        protected string _name;
+        protected string Name;
 
         protected Component(string name)
         {
-            _name = name;
+            Name = name;
         }
 
         internal virtual void Add(Component component)
@@ -27,7 +30,7 @@ namespace Composite
 
         internal virtual void Print()
         {
-            Console.WriteLine(_name);
+            Console.WriteLine(Name);
         }
     }
 }

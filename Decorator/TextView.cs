@@ -6,8 +6,10 @@ using System;
 
 namespace Decorator
 {
-    // Concrete Components provide default implementations of the operations.
-    // There might be several variations of these classes.
+    /// <summary>
+    /// Concrete Components provide default implementations of the operations.
+    /// There might be several variations of these classes.
+    /// </summary>
     internal class TextView : VisualComponent
     {
         internal override void Draw()

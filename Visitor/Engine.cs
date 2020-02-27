@@ -8,9 +8,9 @@ namespace Visitor
     /// that it calls the visitor's method corresponding to the component's
     /// class.
     /// </summary>
-    public class Engine : ICarElement
+    internal class Engine : ICarElement
     {
-        public Engine(string name)
+        internal Engine(string name)
         {
             Name = name;
         }

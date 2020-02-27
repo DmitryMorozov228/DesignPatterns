@@ -2,14 +2,12 @@
 // http://www.softeq.com
 // 
 
-namespace Facade
+namespace Facade.Interfaces
 {
-    public interface IDvdPlayerService
+    internal interface IProjectorService
     {
         void On();
-        void Play(string movie);
-        void Stop();
-        void Eject();
+        void WideScreenMode();
         void Off();
     }
 }

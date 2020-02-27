@@ -10,9 +10,9 @@ namespace Composite
     {
         static void Main(string[] args)
         {
-            Component fileSystem = new Directory("My Documents");
-            Component photo = new Directory("Photo");
-            Component image = new File("image.png");
+            var fileSystem = new Directory("My Documents");
+            var photo = new Directory("Photo");
+            var image = new File("image.png");
             photo.Add(image);
             fileSystem.Add(photo);
             image.Print();

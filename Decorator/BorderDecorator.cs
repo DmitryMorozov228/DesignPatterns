@@ -6,8 +6,10 @@ using System;
 
 namespace Decorator
 {
-    // Concrete Decorators call the wrapped object and alter its result in some
-    // way.
+    /// <summary>
+    /// Concrete Decorators call the wrapped object and alter its result in some
+    /// way.
+    /// </summary>
     internal class BorderDecorator : Decorator
     {
         private readonly int _width;

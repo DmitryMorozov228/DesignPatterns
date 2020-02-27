@@ -12,8 +12,8 @@ namespace Decorator
         {
             // Note how decorators can wrap not only simple components but the
             // other decorators as well.
-            var textView = new ScrollBarDecorator(new BorderDecorator(new TextView(), 4));
-            textView.Draw();
+            var scrollBarDecorator = new ScrollBarDecorator(new BorderDecorator(new TextView(), 4));
+            scrollBarDecorator.Draw();
             Console.ReadKey();
         }
     }

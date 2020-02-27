@@ -2,9 +2,9 @@
 // http://www.softeq.com
 // 
 
-namespace Facade
+namespace Facade.Interfaces
 {
-    public interface IScreenService
+    internal interface IScreenService
     {
         void Down();
         void Up();

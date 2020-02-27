@@ -12,7 +12,6 @@ namespace Proxy
         {
             var image1 = new ProxyImage("1.txt");
             image1.Display();
-            image1.Display();
             Console.ReadKey();
         }
     }

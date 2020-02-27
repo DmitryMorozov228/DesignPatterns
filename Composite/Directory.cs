@@ -7,15 +7,18 @@ using System.Collections.Generic;
 
 namespace Composite
 {
-    // The Composite class represents the complex components that may have
-    // children. Usually, the Composite objects delegate the actual work to
-    // their children and then "sum-up" the result.
+    /// <summary>
+    /// The Composite class represents the complex components that may have
+    /// children. Usually, the Composite objects delegate the actual work to
+    /// their children and then "sum-up" the result.
+    /// </summary>
     internal class Directory : Component
     {
-        private readonly List<Component> _components = new List<Component>();
+        private readonly List<Component> _components;
 
         internal Directory(string name) : base(name)
         {
+            _components = new List<Component>();
         }
 
         internal override void Add(Component component)
@@ -30,9 +33,9 @@ namespace Composite
 
         internal override void Print()
         {
-            Console.WriteLine($"Node: {_name}");
+            Console.WriteLine($"Node: {Name}");
             Console.WriteLine("Subnodes:");
-            foreach (Component c in _components)
+            foreach (var c in _components)
             {
                 c.Print();
             }

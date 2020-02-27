@@ -4,11 +4,15 @@
 
 namespace Adapter
 {
+    /// <summary>
+    /// The Adapter makes the Adaptee's interface compatible with the Target's
+    /// interface.
+    /// </summary>
     internal class HorseToTransportAdapter : ITransport
     {
         private readonly IAnimal _animal;
 
-        public HorseToTransportAdapter(IAnimal animal)
+        internal HorseToTransportAdapter(IAnimal animal)
         {
             _animal = animal;
         }

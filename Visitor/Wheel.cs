@@ -8,9 +8,9 @@ namespace Visitor
     /// that it calls the visitor's method corresponding to the component's
     /// class.
     /// </summary>
-    public class Wheel : ICarElement
+    internal class Wheel : ICarElement
     {
-        public Wheel(string name)
+        internal Wheel(string name)
         {
             Name = name;
         }

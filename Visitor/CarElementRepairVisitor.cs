@@ -9,7 +9,7 @@ namespace Visitor
     /// Concrete Visitors implement several versions of the same algorithm, which
     /// can work with all concrete component classes.
     /// </summary>
-    public class CarElementRepairVisitor : ICarElementVisitor
+    internal class CarElementRepairVisitor : ICarElementVisitor
     {
         public void Visit(Body body)
         {

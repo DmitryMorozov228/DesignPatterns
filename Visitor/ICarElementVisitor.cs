@@ -9,7 +9,7 @@ namespace Visitor
     /// visitor to identify the exact class of the component that it's dealing
     /// with.
     /// </summary>
-    public interface ICarElementVisitor
+    internal interface ICarElementVisitor
     {
         void Visit(Body body);
         void Visit(Engine engine);

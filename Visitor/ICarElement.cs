@@ -7,7 +7,7 @@ namespace Visitor
     /// The Element interface declares an `accept` method that should take the
     /// base visitor interface as an argument.
     /// </summary>
-    public interface ICarElement
+    internal interface ICarElement
     {
         string Name { get; set; }
         void Accept(ICarElementVisitor visitor);
