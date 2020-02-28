@@ -4,10 +4,12 @@
 
 namespace Flyweight
 {
-    // The Flyweight stores a common portion of the state (also called intrinsic
-    // state) that belongs to multiple real business entities. The Flyweight
-    // accepts the rest of the state (extrinsic state, unique for each entity)
-    // via its method parameters.
+    /// <summary>
+    /// The Flyweight stores a common portion of the state (also called intrinsic
+    /// state) that belongs to multiple real business entities. The Flyweight
+    /// accepts the rest of the state (extrinsic state, unique for each entity)
+    /// via its method parameters.
+    /// </summary>
     internal abstract class Burger
     {
         protected string Name { get; set; }

@@ -6,15 +6,17 @@ using System;
 
 namespace Flyweight
 {
+    /// <summary>
     /// A  ConcreteFlyweight class
+    /// </summary>
     internal class BbqKing : Burger
     {
-        internal BbqKing()
+        internal BbqKing(string name, string cheese, string toppings, decimal price)
         {
-            Name = "BBQ King";
-            Cheese = "American";
-            Toppings = "Onion rings, lettuce, and BBQ sauce";
-            Price = 2.49m;
+            Name = name;
+            Cheese = cheese;
+            Toppings = toppings;
+            Price = price;
         }
 
         internal override void Display(int orderTotal)

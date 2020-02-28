@@ -6,13 +6,20 @@ using System.Collections.Generic;
 
 namespace Flyweight
 {
-    // The Flyweight Factory creates and manages the Flyweight objects. It
-    // ensures that flyweights are shared correctly. When the client requests a
-    // flyweight, the factory either returns an existing instance or creates a
-    // new one, if it doesn't exist yet.
+    /// <summary>
+    /// The Flyweight Factory creates and manages the Flyweight objects. It
+    /// ensures that flyweights are shared correctly. When the client requests a
+    /// flyweight, the factory either returns an existing instance or creates a
+    /// new one, if it doesn't exist yet.
+    /// </summary>
     internal class BurgerFactory
     {
-        private readonly Dictionary<char, Burger> _burgers = new Dictionary<char, Burger>();
+        private readonly Dictionary<char, Burger> _burgers;
+
+        internal BurgerFactory()
+        {
+            _burgers = new Dictionary<char, Burger>();
+        }
 
         internal Burger GetBurger(char key)
         {
@@ -27,12 +34,12 @@ namespace Flyweight
                 {
                     case 'B':
                     {
-                        burger = new BaconMaster();
+                        burger = new BaconMaster("Bacon Master", "American", "lots of bacon", 2.39m);
                         break;
                     }
                     case 'Q':
                     {
-                        burger = new BbqKing();
+                        burger = new BbqKing("BBQ King", "American", "Onion rings, lettuce, and BBQ sauce", 2.49m);
                         break;
                     }
                 }

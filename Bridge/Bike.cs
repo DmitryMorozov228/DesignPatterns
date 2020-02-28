@@ -6,7 +6,10 @@ using System;
 
 namespace Bridge
 {
-    // Refine abstraction 1 in bridge pattern 
+    /// <summary>
+    /// You can extend the Abstraction without changing the Implementation
+    /// classes.
+    /// </summary>
     internal class Bike : Vehicle
     {
         internal Bike(IFactory factory) : base(factory)

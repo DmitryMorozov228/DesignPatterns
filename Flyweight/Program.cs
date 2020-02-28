@@ -29,7 +29,7 @@ namespace Flyweight
                 var factory = new BurgerFactory();
                 var orderTotal = 0;
 
-                //Get the slider from the factory
+                // Get the slider from the factory
                 foreach (var c in chars)
                 {
                     orderTotal++;
