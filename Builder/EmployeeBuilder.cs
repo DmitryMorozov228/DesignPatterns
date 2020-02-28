@@ -17,9 +17,9 @@ namespace Builder
             Employee = new Employee();
         }
 
-        internal abstract EmployeeBuilder SetName();
-        internal abstract EmployeeBuilder SetPosition();
-        internal abstract EmployeeBuilder SetSalary();
+        internal abstract EmployeeBuilder SetName(string name);
+        internal abstract EmployeeBuilder SetPosition(string position);
+        internal abstract EmployeeBuilder SetSalary(double salary);
         internal abstract Employee Build();
     }
 }

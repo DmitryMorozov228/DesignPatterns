@@ -11,21 +11,21 @@ namespace Builder
     /// </summary>
     internal class DeveloperBuilder : EmployeeBuilder
     {
-        internal override EmployeeBuilder SetName()
+        internal override EmployeeBuilder SetName(string name)
         {
-            Employee.Name = "Chen Kim";
+            Employee.Name = name;
             return this;
         }
 
-        internal override EmployeeBuilder SetPosition()
+        internal override EmployeeBuilder SetPosition(string position)
         {
-            Employee.Position = ".NET Developer";
+            Employee.Position = position;
             return this;
         }
 
-        internal override EmployeeBuilder SetSalary()
+        internal override EmployeeBuilder SetSalary(double salary)
         {
-            Employee.Salary = 20.2;
+            Employee.Salary = salary;
             return this;
         }
 

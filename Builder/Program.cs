@@ -11,9 +11,9 @@ namespace Builder
         static void Main(string[] args)
         {
             var employee = new DeveloperBuilder()
-                .SetName()
-                .SetPosition()
-                .SetSalary()
+                .SetName("Chen Kim")
+                .SetPosition(".NET Developer")
+                .SetSalary(20.2)
                 .Build();
             Console.WriteLine(employee.ToString());
             Console.ReadKey();
