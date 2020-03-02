@@ -11,6 +11,7 @@ namespace Flyweight
     /// ensures that flyweights are shared correctly. When the client requests a
     /// flyweight, the factory either returns an existing instance or creates a
     /// new one, if it doesn't exist yet.
+    /// Test
     /// </summary>
     internal class BurgerFactory
     {
