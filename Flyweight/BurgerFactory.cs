@@ -18,7 +18,7 @@ namespace Flyweight
 
         internal BurgerFactory()
         {
-            _burgers = new Dictionary<int, Burger>();
+            _burgers = new Dictionary<char, Burger>();
         }
 
         internal Burger GetBurger(char key)
