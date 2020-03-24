@@ -20,8 +20,7 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
-  Major: '1'
-  Minor: '0'
+  buildNumber: '1.0.$(Rev:.r)'
 
 steps:
 - task: NuGetToolInstaller@1
@@ -46,7 +45,5 @@ steps:
   inputs:
     command: 'pack'
     packagesToPack: '**/*.csproj'
-    versioningScheme: 'byBuildNumber'
-    majorVersion: '$(Major)'
-    minorVersion: '$(Minor)'
-    patchVersion: '$(Rev:r)'
+    versioningScheme: 'byEnvVar'
+    versionEnvVar: 'buildNumber'
