@@ -20,7 +20,7 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
-  buildNumber: '1.0.$(Rev:.r)'
+  buildNumber: '1.0.0'
 
 steps:
 - task: NuGetToolInstaller@1
@@ -36,14 +36,16 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-- task: VSTest@2
+- task: PowerShell@2
   inputs:
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
+    targetType: 'inline'
+    script: |
+      # Get package version.
+      $version = (Get-Content -Raw -Path AssemblyVersion.json | ConvertFrom-Json).version
 
 - task: NuGetCommand@2
   inputs:
     command: 'pack'
     packagesToPack: '**/*.csproj'
     versioningScheme: 'byEnvVar'
-    versionEnvVar: 'buildNumber'
+    versionEnvVar: $(version)
