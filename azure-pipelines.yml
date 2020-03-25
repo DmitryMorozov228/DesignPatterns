@@ -20,7 +20,7 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
-  version: '1.0.0'
+  version: '1.0.1'
 
 steps:
 - task: NuGetToolInstaller@1
@@ -41,6 +41,9 @@ steps:
     targetType: 'inline'
     script: |
       # Get package version.
+      Write-Host $(version)
+      Write-Host "##vso[task.setvariable variable=version](Get-Content -Raw -Path AssemblyVersion.json | ConvertFrom-Json).version"
+       Write-Host $(version)
       $version = (Get-Content -Raw -Path AssemblyVersion.json | ConvertFrom-Json).version
       Write-Host $(version)
 
@@ -49,4 +52,4 @@ steps:
     command: 'pack'
     packagesToPack: '**/*.csproj'
     versioningScheme: 'byEnvVar'
-    versionEnvVar: $(version)
+    versionEnvVar: '$(version)'
