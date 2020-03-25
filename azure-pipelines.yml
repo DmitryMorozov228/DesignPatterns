@@ -44,11 +44,8 @@ steps:
     targetType: 'inline'
     script: |
       # Get package version.
-      $env:APP_VERSION = (Get-Content -Raw -Path AssemblyVersion.json | ConvertFrom-Json).version
-      Write-Host $env:APP_VERSION
-      Write-Host $(solution)
-  env:
-    APP_VERSION: $(version)
+      $(version) = (Get-Content -Raw -Path AssemblyVersion.json | ConvertFrom-Json).version
+      Write-Host $(version)
 
 - task: NuGetCommand@2
   inputs:
