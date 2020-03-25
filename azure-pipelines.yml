@@ -52,4 +52,4 @@ steps:
     command: 'pack'
     packagesToPack: '**/*.csproj'
     versioningScheme: 'byEnvVar'
-    versionEnvVar: '$VERSION'
+    versionEnvVar: $VERSION
