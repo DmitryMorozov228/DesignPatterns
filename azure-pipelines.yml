@@ -52,3 +52,9 @@ steps:
     packagesToPack: '**/*.csproj'
     versioningScheme: 'byEnvVar'
     versionEnvVar: BUILD_VERSION
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'DesignPatterns'
+    publishLocation: 'Container'
