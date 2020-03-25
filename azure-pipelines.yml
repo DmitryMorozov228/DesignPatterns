@@ -51,7 +51,7 @@ steps:
     command: 'pack'
     packagesToPack: '**/*.csproj'
     versioningScheme: 'byEnvVar'
-    versionEnvVar: BUILD_VERSION
+    versionEnvVar: version
 
 - task: PublishBuildArtifacts@1
   inputs:
