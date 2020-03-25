@@ -17,13 +17,10 @@ pool:
   vmImage: 'windows-latest'
 
 variables:
-- group: 'design-patterns'
-- name: 'solution'
-  value: '**/*.sln'
-- name: 'buildPlatform'
-  value: 'Any CPU'
-- name: 'buildConfiguration'
-  value: 'Release'
+  solution: '**/*.sln'
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
+  version: '1.0.0'
 
 steps:
 - task: NuGetToolInstaller@1
@@ -46,9 +43,6 @@ steps:
       # Get package version.
       $version = (Get-Content -Raw -Path AssemblyVersion.json | ConvertFrom-Json).version
       Write-Host $(version)
-      Write-Host "##vso[task.setvariable variable=version]$version"
-  # env:
-  #   BUILD_VERSION: $(version)
 
 - task: NuGetCommand@2
   inputs:
