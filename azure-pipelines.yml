@@ -17,10 +17,13 @@ pool:
   vmImage: 'windows-latest'
 
 variables:
-  solution: '**/*.sln'
-  buildPlatform: 'Any CPU'
-  buildConfiguration: 'Release'
-  buildNumber: '1.0.0'
+- group: 'my-var-group'
+- name: 'solution'
+  value: '**/*.sln'
+- name: 'buildPlatform'
+  value: 'Any CPU'
+- name: 'buildConfiguration'
+  value: 'Release'
 
 steps:
 - task: NuGetToolInstaller@1
@@ -41,7 +44,10 @@ steps:
     targetType: 'inline'
     script: |
       # Get package version.
-      $version = (Get-Content -Raw -Path AssemblyVersion.json | ConvertFrom-Json).version
+      $env:APP_VERSION = (Get-Content -Raw -Path AssemblyVersion.json | ConvertFrom-Json).version
+      Write-Host $env:APP_VERSION
+  env:
+    APP_VERSION: $(version)
 
 - task: NuGetCommand@2
   inputs:
