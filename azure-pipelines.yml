@@ -44,11 +44,11 @@ steps:
     targetType: 'inline'
     script: |
       # Get package version.
-      $env:BUILD_VERSION = (Get-Content -Raw -Path AssemblyVersion.json | ConvertFrom-Json).version
-      Write-Host "##vso[task.setvariable variable=version;]$env:BUILD_VERSION"
+      $version = (Get-Content -Raw -Path AssemblyVersion.json | ConvertFrom-Json).version
+      Write-Host "##vso[task.setvariable variable=version]$version"
       Write-Host $(version)
-  env:
-    BUILD_VERSION: $(version)
+  # env:
+  #   BUILD_VERSION: $(version)
 
 - task: NuGetCommand@2
   inputs:
