@@ -46,6 +46,7 @@ steps:
       # Get package version.
       $env:APP_VERSION = (Get-Content -Raw -Path AssemblyVersion.json | ConvertFrom-Json).version
       Write-Host $env:APP_VERSION
+      Write-Host $(version)
   env:
     APP_VERSION: $(version)
 
