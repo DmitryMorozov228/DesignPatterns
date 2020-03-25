@@ -44,7 +44,7 @@ steps:
       Write-Host $(version)
       Write-Host "##vso[task.setvariable variable=version](Get-Content -Raw -Path AssemblyVersion.json | ConvertFrom-Json).version"
        Write-Host $(version)
-      $version = (Get-Content -Raw -Path AssemblyVersion.json | ConvertFrom-Json).version
+      $(version) = (Get-Content -Raw -Path AssemblyVersion.json | ConvertFrom-Json).version
       Write-Host $(version)
 
 - task: NuGetCommand@2
