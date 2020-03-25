@@ -17,7 +17,7 @@ pool:
   vmImage: 'windows-latest'
 
 variables:
-- group: 'my-var-group'
+- group: 'design-patterns'
 - name: 'solution'
   value: '**/*.sln'
 - name: 'buildPlatform'
