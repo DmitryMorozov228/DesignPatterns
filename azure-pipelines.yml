@@ -42,8 +42,8 @@ steps:
     script: |
       # Get package version.
       $version = (Get-Content -Raw -Path AssemblyVersion.json | ConvertFrom-Json).version
-      Write-Host "##vso[task.setvariable variable=Build.SourceVersion;]$version"
-      Write-Host $(Build.SourceVersion)
+      Write-Host "##vso[task.setvariable variable=Version;]$version"
+      Write-Host $(Version)
   env:
     BUILD_VERSION: $(version)
 
