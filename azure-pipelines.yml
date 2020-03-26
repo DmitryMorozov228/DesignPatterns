@@ -46,8 +46,8 @@ steps:
       Write-Host $value
       echo '##vso[task.setvariable variable=version;]$value'
       Write-Host $(version)
-  env:
-    BUILD_VERSION: $(version)
+  # env:
+  #   BUILD_VERSION: $(version)
 
 - task: NuGetCommand@2
   inputs:
