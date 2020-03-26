@@ -23,18 +23,18 @@ variables:
   version: '1.0.1'
 
 steps:
-- task: NuGetToolInstaller@1
+# - task: NuGetToolInstaller@1
 
-- task: NuGetCommand@2
-  inputs:
-    restoreSolution: '$(solution)'
+# - task: NuGetCommand@2
+#   inputs:
+#     restoreSolution: '$(solution)'
 
-- task: VSBuild@1
-  inputs:
-    solution: '$(solution)'
-    msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:DesktopBuildPackageLocation="$(build.artifactStagingDirectory)\WebApp.zip" /p:DeployIisAppPath="Default Web Site"'
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
+# - task: VSBuild@1
+#   inputs:
+#     solution: '$(solution)'
+#     msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:DesktopBuildPackageLocation="$(build.artifactStagingDirectory)\WebApp.zip" /p:DeployIisAppPath="Default Web Site"'
+#     platform: '$(buildPlatform)'
+#     configuration: '$(buildConfiguration)'
 
 - task: PowerShell@2
   inputs:
@@ -42,7 +42,9 @@ steps:
     script: |
       # Get package version.
       $version = (Get-Content -Raw -Path AssemblyVersion.json | ConvertFrom-Json).version
+      Write-Host "##vso[task.setvariable variable=version;]1.0.3"
       Write-Host $(version)
+      Write-Host $env:version
   env:
     BUILD_VERSION: $(version)
 
@@ -51,10 +53,10 @@ steps:
     command: 'pack'
     packagesToPack: '**/*.csproj'
     versioningScheme: 'byEnvVar'
-    versionEnvVar: version
+    versionEnvVar: $env:version
 
-- task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'DesignPatterns'
-    publishLocation: 'Container'
+# - task: PublishBuildArtifacts@1
+#   inputs:
+#     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+#     ArtifactName: 'DesignPatterns'
+#     publishLocation: 'Container'
