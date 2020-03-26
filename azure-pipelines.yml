@@ -41,10 +41,9 @@ steps:
     targetType: 'inline'
     script: |
       # Get package version.
-      $pipeline.variables.version.value = (Get-Content -Raw -Path AssemblyVersion.json | ConvertFrom-Json).version
-      Write-Host "##vso[task.setvariable variable=version;]1.0.3"
-      Write-Host $(version)
-      Write-Host $env:version
+      $version = (Get-Content -Raw -Path AssemblyVersion.json | ConvertFrom-Json).version
+      Write-Host "##vso[task.setvariable variable=Build.SourceVersion;]$version"
+      Write-Host $(Build.SourceVersion)
   env:
     BUILD_VERSION: $(version)
 
