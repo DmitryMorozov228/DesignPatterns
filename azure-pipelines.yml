@@ -43,7 +43,7 @@ steps:
       # Get package version.
       Write-Host (Get-Content -Raw -Path AssemblyVersion.json | ConvertFrom-Json).version
       $value = (Get-Content -Raw -Path AssemblyVersion.json | ConvertFrom-Json).version
-      Write-Host $(value)
+      Write-Host $value
       Write-Host $(version)
       Write-Host "##vso[task.setvariable variable=version;]$value"
       Write-Host $(version)
