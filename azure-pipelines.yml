@@ -41,11 +41,10 @@ steps:
     targetType: 'inline'
     script: |
       # Get package version.
-      Write-Host (Get-Content -Raw -Path AssemblyVersion.json | ConvertFrom-Json).version
+      Write-Host $(version)
       $value = (Get-Content -Raw -Path AssemblyVersion.json | ConvertFrom-Json).version
       Write-Host $value
-      Write-Host $(version)
-      Write-Host "##vso[task.setvariable variable=version;]$value"
+      echo '##vso[task.setvariable variable=version;]$value'
       Write-Host $(version)
   env:
     BUILD_VERSION: $(version)
