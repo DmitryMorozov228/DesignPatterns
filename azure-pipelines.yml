@@ -42,27 +42,28 @@ steps:
     targetType: 'inline'
     script: |
       # Get package version.
-      echo "##vso[task.setvariable variable=version;isOutput=true]this is the value"
-      # $version = (Get-Content -Raw -Path AssemblyVersion.json | ConvertFrom-Json).version
-  # env:
-  #   BUILD_VERSION: $(version)
+       $version = (Get-Content -Raw -Path AssemblyVersion.json | ConvertFrom-Json).version
+      echo "##vso[task.setvariable variable=majorVersion;isOutput=true]($version | ConvertFrom-String -Delimiter "\.").P1"
+      echo "##vso[task.setvariable variable=minorVersion;isOutput=true]($version | ConvertFrom-String -Delimiter "\.").P2"
+      echo "##vso[task.setvariable variable=patchVersion;isOutput=true]($version | ConvertFrom-String -Delimiter "\.").P3"
 
 - task: PowerShell@2
-  name: getSourceVersion2
   inputs:
     targetType: 'inline'
     script: |
       # Get package version.
-      Write-Host $(getSourceVersion.version)
-  # env:
-  #   BUILD_VERSION: $(version)
+      Write-Host $(getSourceVersion.majorVersion)
+      Write-Host $(getSourceVersion.minorVersion)
+      Write-Host $(getSourceVersion.patchVersion)
 
 - task: NuGetCommand@2
   inputs:
     command: 'pack'
     packagesToPack: '**/*.csproj'
-    versioningScheme: 'byEnvVar'
-    versionEnvVar: $(getSourceVersion.version)
+    versioningScheme: 'byPrereleaseNumber'
+    majorVersion: $(getSourceVersion.majorVersion)
+    minorVersion: $(getSourceVersion.minorVersion)
+    patchVersion: $(getSourceVersion.patchVersion)
 
 # - task: PublishBuildArtifacts@1
 #   inputs:
