@@ -54,6 +54,7 @@ steps:
   inputs:
     command: 'pack'
     packagesToPack: '**/*.csproj'
+    buildProperties: 'VersionSuffix=""'
     versioningScheme: 'byPrereleaseNumber'
     majorVersion: $(sourceVersion.majorVersion)
     minorVersion: $(sourceVersion.minorVersion)
