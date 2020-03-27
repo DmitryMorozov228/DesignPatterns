@@ -42,10 +42,13 @@ steps:
     targetType: 'inline'
     script: |
       # Get package version.
-       $version = (Get-Content -Raw -Path AssemblyVersion.json | ConvertFrom-Json).version
-      echo "##vso[task.setvariable variable=majorVersion;isOutput=true]($version | ConvertFrom-String -Delimiter "\.").P1"
-      echo "##vso[task.setvariable variable=minorVersion;isOutput=true]($version | ConvertFrom-String -Delimiter "\.").P2"
-      echo "##vso[task.setvariable variable=patchVersion;isOutput=true]($version | ConvertFrom-String -Delimiter "\.").P3"
+      $version = (Get-Content -Raw -Path AssemblyVersion.json | ConvertFrom-Json).version
+      $majorVersion = ($version | ConvertFrom-String -Delimiter "\.").P1
+      $minorVersion = ($version | ConvertFrom-String -Delimiter "\.").P2
+      $patchVersion = ($version | ConvertFrom-String -Delimiter "\.").P3
+      echo "##vso[task.setvariable variable=majorVersion;isOutput=true]$majorVersion"
+      echo "##vso[task.setvariable variable=minorVersion;isOutput=true]$minorVersion"
+      echo "##vso[task.setvariable variable=patchVersion;isOutput=true]$patchVersion"
 
 - task: PowerShell@2
   inputs:
