@@ -43,22 +43,22 @@ steps:
     script: |
       # Get package version.
       $version = (Get-Content -Raw -Path AssemblyVersion.json | ConvertFrom-Json).version
-      $majorVersion = ($version | ConvertFrom-String -Delimiter "\.").P1
-      $minorVersion = ($version | ConvertFrom-String -Delimiter "\.").P2
-      $patchVersion = ($version | ConvertFrom-String -Delimiter "\.").P3
-      echo "##vso[task.setvariable variable=majorVersion;isOutput=true]$majorVersion"
-      echo "##vso[task.setvariable variable=minorVersion;isOutput=true]$minorVersion"
-      echo "##vso[task.setvariable variable=patchVersion;isOutput=true]$patchVersion"
+      # $majorVersion = ($version | ConvertFrom-String -Delimiter "\.").P1
+      # $minorVersion = ($version | ConvertFrom-String -Delimiter "\.").P2
+      # $patchVersion = ($version | ConvertFrom-String -Delimiter "\.").P3
+      echo "##vso[task.setvariable variable=version;isOutput=true]$version"
+      # echo "##vso[task.setvariable variable=minorVersion;isOutput=true]$minorVersion"
+      # echo "##vso[task.setvariable variable=patchVersion;isOutput=true]$patchVersion"
 
 - task: NuGetCommand@2
   inputs:
-    command: 'pack'
-    packagesToPack: '**/*.csproj'
-    buildProperties: 'VersionSuffix=""'
-    versioningScheme: 'byPrereleaseNumber'
-    majorVersion: $(sourceVersion.majorVersion)
-    minorVersion: $(sourceVersion.minorVersion)
-    patchVersion: $(sourceVersion.patchVersion)
+    command: 'custom'
+    arguments: 'pack "**/*.csproj" -Version $(version)'
+    # packagesToPack: '**/*.csproj'
+    # versioningScheme: 'byEnvVar'
+    # majorVersion: $(sourceVersion.majorVersion)
+    # minorVersion: $(sourceVersion.minorVersion)
+    # patchVersion: $(sourceVersion.patchVersion)
 
 - task: PublishBuildArtifacts@1
   inputs:
