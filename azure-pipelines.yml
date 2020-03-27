@@ -42,7 +42,8 @@ steps:
     targetType: 'inline'
     script: |
       # Get package version.
-      $version = (Get-Content -Raw -Path AssemblyVersion.json | ConvertFrom-Json).version
+      echo "##vso[task.setvariable variable=myOutputVar;isOutput=true]this is the value"
+      # $version = (Get-Content -Raw -Path AssemblyVersion.json | ConvertFrom-Json).version
   # env:
   #   BUILD_VERSION: $(version)
 
@@ -52,7 +53,7 @@ steps:
     targetType: 'inline'
     script: |
       # Get package version.
-      Write-Host $(getSourceVersion.version)
+      Write-Host $(getSourceVersion.myOutputVar)
   # env:
   #   BUILD_VERSION: $(version)
 
