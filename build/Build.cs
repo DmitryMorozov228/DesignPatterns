@@ -63,12 +63,11 @@ class Build : NukeBuild
         .Executes(() =>
         {
             var version = GitVersion.SemVer;
-            var informationalVersion = GitVersion.SemVer.Replace("build.", "");
             DotNetPack(o => o.SetVersion(version)
-                .SetInformationalVersion(informationalVersion)
                 .SetProject(Solution)
                 .SetOutputDirectory(ArtifactsDirectory)
                 .SetConfiguration(Configuration)
+                .EnableNoRestore()
             );
         });
 
