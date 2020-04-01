@@ -16,10 +16,10 @@ pr:
   - hotfix/*
 
 stages:
-  - stage: Build
+- stage: Build
   jobs:
-    - job: BuildApplication
-    - displayName: Build application
+  - job: BuildApplication
+    displayName: Build application
     pool:
       vmImage: 'windows-latest'
     steps:
