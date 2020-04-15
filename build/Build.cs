@@ -66,6 +66,7 @@ class Build : NukeBuild
             NuGetTasks.NuGetPack(s => s
                 .SetTargetPath(RootDirectory / "DesignPatterns.nuspec")
                 .SetVersion(version)
+                .SetConfiguration(Configuration)
                 .SetOutputDirectory(ArtifactsDirectory));
         });
 
