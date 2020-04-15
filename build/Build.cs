@@ -1,10 +1,10 @@
 using Nuke.Common;
-using Nuke.Common.BuildServers;
 using Nuke.Common.Execution;
 using Nuke.Common.ProjectModel;
 using Nuke.Common.Tooling;
 using Nuke.Common.Tools.DotNet;
 using Nuke.Common.Tools.GitVersion;
+using Nuke.Common.Tools.NuGet;
 using static Nuke.Common.IO.FileSystemTasks;
 using static Nuke.Common.IO.PathConstruction;
 using static Nuke.Common.Tools.DotNet.DotNetTasks;
@@ -63,12 +63,10 @@ class Build : NukeBuild
         .Executes(() =>
         {
             var version = GitVersion.SemVer;
-            DotNetPack(o => o.SetVersion(version)
-                .SetProject(Solution)
-                .SetOutputDirectory(ArtifactsDirectory)
-                .SetConfiguration(Configuration)
-                .EnableNoRestore()
-            );
+            NuGetTasks.NuGetPack(s => s
+                .SetTargetPath(RootDirectory / "DesignPatterns.nuspec")
+                .SetVersion(version)
+                .SetOutputDirectory(ArtifactsDirectory));
         });
 
     Target CiSetBuildMetadata => _ => _

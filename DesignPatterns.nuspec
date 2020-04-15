@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>DesignPatterns</id>
+    <version>1.0.0</version>
+    <title>Design Patterns</title>
+    <authors>Softeq Development Corp.</authors>
+    <owners>Softeq Development Corp.</owners>
+    <projectUrl>https://github.com/DmitryMorozov228/DesignPatterns</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>This library consists of base implementations of design patterns.</description>
+    <copyright>Copyright 2020 Softeq Development Corp.</copyright>
+  </metadata>
+  <files>
+    <file src="src/AbstractFactory/bin/Release/netcoreapp2.2/AbstractFactory.dll" target="lib\netcoreapp2.2" />
+    <file src="src/Adapter/bin/Release/netcoreapp2.2/Adapter.dll" target="lib\netcoreapp2.2" />
+    <file src="src/Bridge/bin/Release/netcoreapp2.2/Bridge.dll" target="lib\netcoreapp2.2" />
+    <file src="src/Builder/bin/Release/netcoreapp2.2/Builder.dll" target="lib\netcoreapp2.2" />
+    <file src="src/ChainOfResponsibility/bin/Release/netcoreapp2.2/ChainOfResponsibility.dll" target="lib\netcoreapp2.2" />
+    <file src="src/Command/bin/Release/netcoreapp2.2/Command.dll" target="lib\netcoreapp2.2" />
+    <file src="src/Composite/bin/Release/netcoreapp2.2/Composite.dll" target="lib\netcoreapp2.2" />
+    <file src="src/Decorator/bin/Release/netcoreapp2.2/Decorator.dll" target="lib\netcoreapp2.2" />
+    <file src="src/Facade/bin/Release/netcoreapp2.2/Facade.dll" target="lib\netcoreapp2.2" />
+    <file src="src/FactoryMethod/bin/Release/netcoreapp2.2/FactoryMethod.dll" target="lib\netcoreapp2.2" />
+    <file src="src/FluentBuilder/bin/Release/netcoreapp2.2/FluentBuilder.dll" target="lib\netcoreapp2.2" />
+    <file src="src/Flyweight/bin/Release/netcoreapp2.2/Flyweight.dll" target="lib\netcoreapp2.2" />
+    <file src="src/Interpreter/bin/Release/netcoreapp2.2/Interpreter.dll" target="lib\netcoreapp2.2" />
+    <file src="src/Iterator/bin/Release/netcoreapp2.2/Iterator.dll" target="lib\netcoreapp2.2" />
+    <file src="src/Mediator/bin/Release/netcoreapp2.2/Mediator.dll" target="lib\netcoreapp2.2" />
+    <file src="src/Memento/bin/Release/netcoreapp2.2/Memento.dll" target="lib\netcoreapp2.2" />
+    <file src="src/Observer/bin/Release/netcoreapp2.2/Observer.dll" target="lib\netcoreapp2.2" />
+    <file src="src/Prototype/bin/Release/netcoreapp2.2/Prototype.dll" target="lib\netcoreapp2.2" />
+    <file src="src/Proxy/bin/Release/netcoreapp2.2/Proxy.dll" target="lib\netcoreapp2.2" />
+    <file src="src/Singleton/bin/Release/netcoreapp2.2/Singleton.dll" target="lib\netcoreapp2.2" />
+    <file src="src/State/bin/Release/netcoreapp2.2/State.dll" target="lib\netcoreapp2.2" />
+    <file src="src/Strategy/bin/Release/netcoreapp2.2/Strategy.dll" target="lib\netcoreapp2.2" />
+    <file src="src/TemplateMethod/bin/Release/netcoreapp2.2/TemplateMethod.dll" target="lib\netcoreapp2.2" />
+    <file src="src/Visitor/bin/Release/netcoreapp2.2/Visitor.dll" target="lib\netcoreapp2.2" />
+  </files>
+</package>
