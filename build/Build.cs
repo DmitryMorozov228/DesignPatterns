@@ -54,6 +54,7 @@ class Build : NukeBuild
         .Executes(() =>
         {
             DotNetBuild(o => o.SetProjectFile(Solution)
+                .SetConfiguration(Configuration)
                 .EnableNoRestore()
             );
         });
